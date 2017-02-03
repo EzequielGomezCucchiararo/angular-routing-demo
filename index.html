@@ -11,10 +11,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script>
 
     <style>
-      main {
-        background: #000;
-        color: white;
-      }
+
     </style>
 </head>
 
@@ -44,7 +41,7 @@
 
             $routeProvider
                 .when('/', {
-                  template: '<h1>this is the home</h1>'
+                  templateUrl: 'templates/home.html'
                 })
                 .when('/about', {
                   template: '<h1>this is about</h1>'
