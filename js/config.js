@@ -3,16 +3,20 @@ angular.module('myRoutingApp')
 
     $routeProvider
       .when('/', {
-        templateUrl: 'js/home/home.html',
+        templateUrl: 'js/home/template.html',
         controller: 'HomeController'
       })
       .when('/about', {
-        templateUrl: 'js/about/about.html',
+        templateUrl: 'js/about/template.html',
         controller: 'AboutController'
       })
       .when('/contact', {
-        templateUrl: 'js/contact/contact.html',
+        templateUrl: 'js/contact/template.html',
         controller: 'ContactController'
+      })
+      .when('/details/:index', {
+        templateUrl: 'js/details/template.html',
+        controller: 'DetailsController'
       })
 
   })

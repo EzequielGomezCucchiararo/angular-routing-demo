@@ -3,7 +3,9 @@
     <h1>Hello, world!</h1>
     <p>{{ section }}</p>
     <ul>
-      <li ng-repeat="student in students">{{ student.name }}</li>
+      <li ng-repeat="student in students">
+        <a href="#/details/{{ $index }}">{{ student.name }}</a>
+      </li>
     </ul>
   </div>
 </div>
