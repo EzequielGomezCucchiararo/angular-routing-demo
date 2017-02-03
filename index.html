@@ -38,7 +38,13 @@
 
       angular.module('myRoutingApp',['ngRoute'])
         .controller("HomeController", function($scope) {
-          $scope.section = 'THIS IS THE HOME fromt the controller'
+          $scope.section = 'HOME'
+        })
+        .controller("AboutController", function($scope) {
+          $scope.section = 'ABOUT'
+        })
+        .controller("ContactController", function($scope) {
+          $scope.section = 'CONTACT'
         })
         .config(function($routeProvider){
 
@@ -49,12 +55,11 @@
                 })
                 .when('/about', {
                   template: '<h1>this is {{ section }}</h1>',
-                  controller: function($scope) {
-                    $scope.section = 'THE SECTION called about'
-                  }
+                  controller: 'AboutController'
                 })
                 .when('/contact', {
-                  template: '<h1>this is contact</h1>'
+                  template: '<h1>this is {{ section }}</h1>',
+                  controller: 'ContactController'
                 })
 
         })
