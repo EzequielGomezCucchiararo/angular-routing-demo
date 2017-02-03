@@ -44,7 +44,10 @@
                   templateUrl: 'templates/home.html'
                 })
                 .when('/about', {
-                  template: '<h1>this is about</h1>'
+                  template: '<h1>this is {{ section }}</h1>',
+                  controller: function($scope) {
+                    $scope.section = 'about'
+                  }
                 })
                 .when('/contact', {
                   template: '<h1>this is contact</h1>'
