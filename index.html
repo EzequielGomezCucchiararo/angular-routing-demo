@@ -41,12 +41,15 @@
 
             $routeProvider
                 .when('/', {
-                  templateUrl: 'templates/home.html'
+                  templateUrl: 'templates/home.html',
+                  controller: function($scope) {
+                    $scope.section = 'THIS IS THE HOME'
+                  }
                 })
                 .when('/about', {
                   template: '<h1>this is {{ section }}</h1>',
                   controller: function($scope) {
-                    $scope.section = 'about'
+                    $scope.section = 'THE SECTION called about'
                   }
                 })
                 .when('/contact', {
