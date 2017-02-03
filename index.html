@@ -34,37 +34,13 @@
     </div>
     <!-- /container -->
 
-    <script>
+    <script src="js/app.js"></script>
+    <script src="js/factory.js"></script>
+    <script src="js/home/HomeController.js"></script>
+    <script src="js/about/AboutController.js"></script>
+    <script src="js/contact/ContactController.js"></script>
+    <script src="js/config.js"></script>
 
-      angular.module('myRoutingApp',['ngRoute'])
-        .controller("HomeController", function($scope) {
-          $scope.section = 'HOME'
-        })
-        .controller("AboutController", function($scope) {
-          $scope.section = 'ABOUT'
-        })
-        .controller("ContactController", function($scope) {
-          $scope.section = 'CONTACT'
-        })
-        .config(function($routeProvider){
-
-            $routeProvider
-                .when('/', {
-                  templateUrl: 'templates/home.html',
-                  controller: 'HomeController'
-                })
-                .when('/about', {
-                  templateUrl: 'templates/about.html',
-                  controller: 'AboutController'
-                })
-                .when('/contact', {
-                  templateUrl: 'templates/contact.html',
-                  controller: 'ContactController'
-                })
-
-        })
-
-    </script>
 </body>
 
 </html>
