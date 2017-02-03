@@ -37,14 +37,15 @@
     <script>
 
       angular.module('myRoutingApp',['ngRoute'])
+        .controller("HomeController", function($scope) {
+          $scope.section = 'THIS IS THE HOME fromt the controller'
+        })
         .config(function($routeProvider){
 
             $routeProvider
                 .when('/', {
                   templateUrl: 'templates/home.html',
-                  controller: function($scope) {
-                    $scope.section = 'THIS IS THE HOME'
-                  }
+                  controller: 'HomeController'
                 })
                 .when('/about', {
                   template: '<h1>this is {{ section }}</h1>',
